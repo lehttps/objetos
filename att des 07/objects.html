@@ -1,0 +1,42 @@
+<link rel="stylesheet" href="style.css">
+
+<html>
+<head>
+  <title> objects </title>
+  <script>
+
+    function exibirPersonagem() {
+      var nome = prompt("Digite o nome do personagem:");
+      
+      if (nome) {
+        nome = nome.toLowerCase();
+
+        var personagens = {
+          luffy: "Monkey D. Luffy é o capitão dos piratas do chapéu de palha.",
+          zoro: "Roronoa Zoro é o espadachim dos Piratas do chapéu de palha.",
+          nami: "Nami é a navegadora dos piratas do chapéu de palha.",
+          sanji: "Sanji é o cozinheiro dos piratas do chapéu de palha.",
+          robin: "Nico Robin é a arqueóloga dos piratas do chapéu de palha.",
+          usopp: "O Usopp é o atirador dos piratas do chapéu de palha",
+          chopper: "Tony Tony Chopper é o médico dos piratas do chapéu de palha"
+        };
+
+        
+        if (personagens[nome]) {
+          var mensagem = personagens[nome];
+          document.getElementById("info").textContent = mensagem;
+        } else {
+          document.getElementById("info").textContent = "Dado não coletado :( Você digitou o nome certo? Tente novamente!)";
+        }
+      }
+    }
+  </script>
+</head>
+<body>
+ 
+  <h1> Que personagens deseja conhecer? </h1>
+
+  <button onclick="exibirPersonagem()"> Pesquisar um personagem</button>
+  <p id="info"></p>
+</body>
+</html>
